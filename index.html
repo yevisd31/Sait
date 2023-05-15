@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пример шапки</title>
+  <style>
+    /* Добавьте стилизацию по своему усмотрению */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f2f2f2;
+    }
+
+    .header-left {
+      margin-left: 100px;
+    }
+
+    .header-left span {
+      margin-right: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .header-left span:hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: orange; /* Оранжевый цвет для чертачек */
+    }
+
+    .search-box {
+      flex-grow: 1;
+      margin: 0 80px;
+      text-align: center;
+    }
+
+    .search-box input {
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+      padding: 5px;
+      background-color: #ccc;
+    }
+
+    .header-right {
+      margin-right: 70px;
+    }
+
+    .header-right span {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 600px) {
+  
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    .menu-item {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      border: 2px solid orange;
+      background-color: orange;
+      color: #fff;
+    }
+
+    .highlighted {
+      border: 2px solid orange;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .card-item {
+      flex: 0 0 50%;
+      padding: 10px;
+    }
+
+    .photo {
+      width: 100%;
+      height: auto;
+    }
+
+    .text {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-right: 5px;
+      background-color: orange;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button1 {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-right: 5px;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <span>Photos</span>
+      <span>Videos</span>
+      <span>Podcast</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search..." style="background-color: #ccc;">
+    </div>
+    <div class="header-right">
+      <span>English</span>
+      <span>Signin</span>
+    </div>
+  </header>
+  <div class="sidebar">
+    <div class="menu-item">All Photos</div>
+    <div class="menu-item">Selfies</div>
+    <div class="menu-item">Recent</div>
+    <div class="menu-item">Deleted</div>
+  </div>
+
+  <div class="content">
+    <h1 class="title">All Photos</h1>
+
+    <div class="card">
+      <div class="card-item">
+        <img src="photo" class="photo">
+        <div class="text">Heading
+          Here goes some sample, example text that is relatively short.
+        </div>
+        <div class="buttons">
+          <a href="#" class="button" style="background-image: url('button1.jpg')">Save to collection</a>
+          <a href="#" class="button1" style="background-image: url('button2.jpg')">Share</a>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="photo2.jpg" class="photo">
+        <div class="text">Heading
+          Here goes some sample, example text that is relatively short.</div>
+        <div class="buttons">
+          <a href="#" class="button" style="background-image: url('button3.jpg')">Save to collection</a>
+          <a href="#" class="button1" style="background-image: url('button4.jpg')">Share</a>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="photo3.jpg" class="photo">
+        <div class="text">Heading
+          Here goes some sample, example text that is relatively short.</div>
+        <div class="buttons">
+          <a href="#" class="button" style="background-image: url('button5.jpg')">Save to collection</a>
+          <a href="#" class="button1" style="background-image: url('button6.jpg')">Share</a>
+        </div>
+      </div>
+      <div class="card-item">
+        <img src="photo4.jpg" class="photo">
+        <div class="text">Heading
+          Here goes some sample, example text that is relatively short.</div>
+        <div class="buttons">
+          <a href="#" class="button" style="background-image: url('button7.jpg')">Save to collection</a>
+          <a href="#" class="button1" style="background-image: url('button8.jpg')">Share</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
